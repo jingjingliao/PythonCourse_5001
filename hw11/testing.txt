@@ -1,0 +1,36 @@
+
+    * class Board:
+        * def test_constructor():
+            1, assert self.grid is the grid we created in game_controller class
+            2, assert dimension of the board == 400
+            3, assert the length of each grid == 100
+            4, assert self.space == self.dimension // self.grid_length
+ 
+        * def test_display(): 
+            1, assert if the grid is not none, whether the grid has object in it
+            2, assert if the grid is None, nothing will happen
+    
+    * class Disk:
+        * def test_constructor():
+            1, assert the column, row, and color of the disks
+
+        * def test_draw_disk():
+            1, assert it can draw a disk
+    
+    * class GameController:
+        * def test_constructor:
+            1, assert self.grid is the grid we created in game_controller class
+            2, assert dimension of the board == 400
+            3, assert the length of each grid == 100
+            4, assert self.space == self.dimension // self.grid_length
+            5, assert self.grid is a 2D grid
+
+        * def test_click():
+            1, get a location of a mouse, if the position == None, put a disk on it, original self.grid != after self.grid
+                if the position != None, you can not put a disk, original self.grid == after self.grid
+
+        * def test_show_result():
+            1, give a mouseX and mouseY, if it is in an available place, assert the quantity of black disk == black disk + 1
+            2, give a mouseX and mouseY, if it is not in an available place, assert the quantity of black disk == black disk
+            3, if there is no remaining space, assert game over is printed
+ 

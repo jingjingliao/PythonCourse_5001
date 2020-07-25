@@ -1,0 +1,65 @@
+1, What possible values can a Boolean expression have?
+Answer: false or true 
+
+2, Where does the term Boolean originate?
+Answer: The term Boolean comes from the name of British mathmatician George Boole 
+
+3, What is an integer equivalent to True in Python?
+Answer: 1
+
+4, What is the integer equivalent to False in Python?
+Answer: 0
+
+5, Is the value -16 interpreted as True or False?
+Answer: True
+
+6, Given the following definitions:
+    x, y, z = 3, 5, 7
+    evaluate the following Boolean expressions:
+    (a) x == 3                      True
+    (b) x < y                       True  
+    (c) x >= y                      False
+    (d) x <= y                      True
+    (e) x != y - 2                  False
+    (f) x < 10                      True
+    (g) x >= 0 and x < 10           True
+    (h) x < 0 and x < 10            False
+    (i) x >= 0 and x < 2            False
+    (j) x < 0 or x < 10             True
+    (k) x > 0 or x < 10             True
+    (l) x < 0 or x > 10             False
+
+7. Given the following definitions:
+     x, y = 3, 5
+     b1, b2, b3, b4 = True, False, x == 3, y < 3
+evaluate the following Boolean expressions:
+(a) b3                                  True
+(b) b4                                  False
+(c) not b1                              False
+(d) not b2                              True
+(e) not b3                              False
+
+(f) not b4                              True
+(g) b1 and b2                           False
+(h) b1 or b2                            True
+(i) b1 and b3                           True    
+(j) b1 or b3                            True
+
+(k) b1 and b4                           False
+(l) b1 or b4                            True
+(m) b2 and b3                           False
+(n) b2 or b3                            True
+(o) b1 and b2 or b3                     True
+
+(p) b1 or b2 and b3                     True
+(q) b1 and b2 and b3                    False
+(r) b1 or b2 or b3                      True
+(s) not b1 and b2 and b3                False
+(t) not b1 or b2 or b3                  True
+
+(u) not (b1 and b2 and b3)              True
+(v) not (b1 or b2 or b3)                False
+(w) not b1 and not b2 and not b3        False
+(x) not b1 or not b2 or not b3          True
+(y) not (not b1 and not b2 and not b3)  True
+(z) not (not b1 or not b2 or not b3)    False

@@ -1,0 +1,79 @@
+What data structures you’ll need (lists, dictionaries, etc.)
+    * I will need a 2D list, which represent the board. It will contain a disk object if I put a disk in it 
+      and if there is nothing, I will initialize as "None"
+    * I will creat a dictionary as well, the key is the location of the available places for disk to put, 
+        the value is the disks' location which the color will be flipped over later on if user press the key
+
+What classes you’ll define
+What functions you’ll need (methods within classes, or other functions that exist outside of any class)
+A short description of each class and function/method
+    * class Board: 
+                    * def display(self):
+                    1, draw the line of the board
+                    2, for loop the 2D list, if it has a disk object, then draw the disk based on disk color
+    * class Disk: 
+                    * def draw_disk(self):
+                        1, get the location and color of the disk and draw the disk based on processing fill and ellipse function
+                        fill(color)
+                        ellipse(location_x, location_y, 90, 90)
+
+                    * def change_color():
+                        1, have the change color function, when the disks need to be flipped, the color of the disk should be changed
+                    
+    * class GameController: 
+                    * def __init__(self):
+                        1, initialize 2D list and record the status of the grid
+                        2, initialize the board instance and transfer the grid to the board
+                        3, initialize the eight directions
+                        4, initialize a dictionary, the key of the dictionary contains the available space for the disk, the value 
+                            is all the location of the disks that need to be flipped over
+
+                    * def initial_disk(self):
+                        1, draw the first four disks
+
+                    * def check_legal_space(self):
+                        1, find the position of the disks and check the eight position of this disk, if it has the opposite color of this disk,
+                            then put it in the dictionary and put the path as its value
+
+                    * def flipover(self):
+                        1, find out the disks that need to be flipover
+
+                    * def human_run(self):
+                    if there is available place to put disk:
+                        if the mouse location is valid, then put the disk of this location and flipped over all the possible disks
+
+                    * def robot_run(self):
+                    if there is available place to put disk:
+                        check all the available place and import random module, pick one place and put the disk in this location
+                            and flipped over all the possible disks
+
+                    * def change_color(self):
+                        if the color is white, then change it to black
+                        if the color is black, then change it to white
+
+                    * def player_turn(self):
+                        if it is player's turn, print it out
+                        if it is computer's turn, print it out
+
+                    * def show_result(self):
+                        if there is no available space, print the result out
+                        if there is no more space on the board, print the result out
+
+
+A bullet-pointed pseudocode of your driver: Tell us about the flow of control, and think about the following cases:
+When the user tries to make an illegal move:
+    * if there is legal location, but the mouse location is not in the available space, nothing happens until it clicks the 
+        right position
+    * if there is no legal location for black disk, then it should be computer's turn
+    * if there is no more legal location for both of the disks, game over
+
+When the user makes a legal move
+    * when the user makes a legal move, we need to put a disk there and all the possible flipped over disks should be flipped to
+      this disk's color
+
+When it’s the computer’s turn
+    * when user clicks, then it is the computer’s turn
+
+When the game is over (there are no more legal moves)
+    * when there is no more room left, game is over
+    * when there is no more legal location for both of the disks, game over

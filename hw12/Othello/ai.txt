@@ -1,0 +1,29 @@
+* Did you attempt to make your computer player very smart -- i.e., do something more clever than just pick a random legal move?
+    Yes, I use sorted function to rank the dictionary based on the value's length, which means there are more disks that need to be 
+    flipped over
+
+* If so, were you able to accomplish this? Is your computer player as smart as you would like?
+    I have already accomplished this, and computer player is very smart now
+
+* How did you determine which piece to play next? Tell us about your “pick next move” algorithm
+    I have the following variables
+    self.black_color = 0 
+    self.white_color = 255
+    self.color = 0
+    and besides, I have the color change function
+    def change_color(self):
+        """Change the color of the disk"""
+        if self.color == self.black_color:
+            self.color = self.white_color
+        else:
+            self.color = self.black_color
+    so when black disk moves, the self.color will become white color and when white disk move, the self.color 
+    will be changed to the black disk
+
+* How often did your computer program beat you, or your friends, or whoever tested it out for you?
+    If it is the first time to play this game, actually, it's really hard for human to win. But if you can find out the pattern
+    it's easier to win later
+    
+* How would you improve it in the future?
+    Deep learning can make the game smarter as it will calculate each step of computers, and human's and the probability of the 
+    success times, then human hardly win. I may change my code after I learned machine learning course

@@ -1,0 +1,71 @@
+5.9 Exercises
+1. In Listing 5.4 (addnonnegatives.py) could the condition of the if statement 
+    have used > instead of >= and achieved the same results? Why?
+
+Answer: It has the same results. 
+        In the while loop, if user input 0 as an entry number, the program will 
+        not execute if statement, but it will still inside the while loop, the 
+        program still runs. And any number plus 0 will be always that number
+        So the result cannot be influenced.
+
+2. In Listing 5.4 (addnonnegatives.py) could the condition of the while 
+    statement have used > instead of >= and achieved the same results? Why?
+
+Answer: It doesn't has the same results. The sum will be always zero
+        when you initialize entry = 0, the program will never execute while
+        loop as the condition to enter the while loop is entry > 0, so the sum
+        is always the number we initialize it
+
+3. In Listing 5.4 (addnonnegatives.py) what would happen if the statement 
+    entry = int(input()) # Get the value
+    were moved out of the loop? Is moving the assignment out of the loop 
+    a good or bad thing to do? Why?
+
+Answer: The value of entry will be always zero
+        it is a bad thing to do it, because we cannot jump out of the while
+        loop because entry = 0 will be always true, and while loop will execute
+        forever
+
+4. How many asterisks does the following code fragment print?
+    a=0
+    while a < 100:
+        print('*', end='')
+        a += 1 
+    print()
+
+Answer: It will print out 100 asterisks
+
+5. How many asterisks does the following code fragment print?
+    a=0
+    while a < 100:
+        print('*', end='')
+    print()
+
+Answer: It will print out endless asterisks.
+
+13. Provide the exact sequence of integers specified by each of the 
+    following range expressions.
+(a) range(5)   
+(b) range(5, 10)
+(c) range(5, 20, 3) 
+(d) range(20, 5, -1) 
+(e) range(20, 5, -3)
+(f) range(10, 5)
+(g) range(0)
+(h) range(10, 101, 10)
+(i) range(10, -1, -1)
+(j) range(-3, 4)
+(k) range(0, 10, 1)
+
+Answer:
+[0, 1, 2, 3, 4]
+[5, 6, 7, 8, 9]
+[5, 8, 11, 14, 17]
+[20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6]
+[20, 17, 14, 11, 8]
+[]
+[]
+[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+[-3, -2, -1, 0, 1, 2, 3]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]

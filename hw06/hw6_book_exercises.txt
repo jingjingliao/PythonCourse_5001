@@ -1,0 +1,112 @@
+1. Is the following a legal Python program?
+     def proc(x):
+         return x + 2
+     def proc(n):
+         return 2*n + 1
+     def main():
+         x = proc(5)
+main()
+
+Answer: NO
+
+2. Is the following a legal Python program?
+     def proc(x):
+         return x + 2
+     def main():
+         x = proc(5)
+         y = proc(4)
+     main()
+
+Answer: YES
+
+3. Is the following a legal Python program?
+     def proc(x):
+         print(x + 2)
+     def main():
+         x = proc(5)
+main()
+
+Answer: YES
+
+4. Is the following a legal Python program?
+     def proc(x, y):
+        return 2*x + y*y
+     def main():
+        print(proc(5, 4))
+     main()
+
+Answer: YES
+
+5. Is the following a legal Python program?
+     def proc(x, y):
+         return 2*x + y*y
+     def main():
+         print(proc(5))
+main()
+
+Answer: NO
+
+6. Is the following a legal Python program?
+     def proc(x):
+         return 2*x
+     def main():
+         print(proc(5, 4))
+main()
+
+Answer: NO
+
+7. Is the following a legal Python program?
+     def proc(x):
+         print(2*x*x)
+     def main():
+         proc(5)
+main()
+
+Answer: YES
+
+8. The programmer was expecting the following program to print 200. What does it print instead? Why does it print what it does?
+     def proc(x):
+         x = 2*x*x
+     def main():
+         num = 10
+         proc(num)
+         print(num)
+main()
+
+Answer: The program will print 10.
+when you call main function, firstly, num = 10, 
+so actual parameter 10 is assigned to the formal parameter num before the proc(num) function begin executing.
+so the function is proc(10), when execute proc(x) function, actual parameter 10 is assigned to the formal parameter x,
+so the variable x is 2 * 10 * 10 = 200, 
+however this function return or print nothing, just variable x = 200, and the program will continue
+to execute print(num) in main function, num is a local variable in main function, it won't change. So the result is 10 
+
+9. Is the following program legal since the variable x is used in two different places (proc and main)?
+Why or why not?
+     def proc(x):
+         return 2*x*x
+     def main():
+         x = 10
+         print(proc(x))
+     main()
+
+Answer: This is a legal function
+when execute main function, firstly variable x = 10, 
+so actual parameter 10 is assigned to the formal parameter x before the proc(x) function begin executing.
+the function will be proc(10), so it will execute proc function, the actual argument of this function is 10 
+and will return 2 * 10 * 10 = 200 then, main function will print out this return value
+
+10. Is the following program legal since the actual parameter has a different name from 
+    the formal pa- rameter (y vs. x)? Why or why not?
+     def proc(x):
+         return 2*x*x
+     def main():
+         y = 10
+         print(proc(y))
+     main()
+
+Answer: This is a legal function.
+when execute main function, variable y = 10, actual parameter 10 is assigned to the formal parameter y before
+the proc(y) function begin executing. The function will be proc(10),then it will execute proc(x), at this time, 
+actual parameter 10 is assigned to the formal parameter x in proc(x) function before executing.
+x = 10 and return 2 * 10 * 10 = 200, then, main function will print out this return value
